@@ -10,10 +10,10 @@ def git_commit_push(branch_name,commit_msg):
     except:
         subprocess.run(["git","checkout",branch_name],check=True)
         print(f"you already have the branch and checked out into {branch_name}")
-    finally:
-        subprocess.run(["git","add","."],check=True)
-        subprocess.run(["git","commit","-m",commit_msg],check=True)
-        subprocess.run(["git","push","origin",branch_name],check=True)
-        print("chages pushed to remote repository !!!")
+
+    subprocess.run(["git","add","."],check=True)
+    subprocess.run(["git","commit","-m",commit_msg],check=True)
+    subprocess.run(["git","push","origin",branch_name],check=True)
+    print("chages pushed to remote repository !!!")
 
 git_commit_push("feature1","add updated automation script")

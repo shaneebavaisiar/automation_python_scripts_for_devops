@@ -16,4 +16,4 @@ def git_commit_push(branch_name,commit_msg):
     subprocess.run(["git","push","origin",branch_name],check=True)
     print("chages pushed to remote repository !!!")
 
-git_commit_push("feature1","add updated automation script")
+git_commit_push("feature1","add website_availabe_checker")
